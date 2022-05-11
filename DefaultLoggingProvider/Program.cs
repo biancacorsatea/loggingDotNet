@@ -6,33 +6,33 @@ using System.Diagnostics;
  * Console
  */
 
-//using ILoggerFactory loggerFactory =
-//      LoggerFactory.Create(builder =>
-//          builder.AddSimpleConsole(options =>
-//          {
-//              options.IncludeScopes = true;
-//              options.SingleLine = true;
-//              options.TimestampFormat = "hh:mm:ss ";
-//          }));
+using ILoggerFactory loggerFactory =
+      LoggerFactory.Create(builder =>
+          builder.AddSimpleConsole(options =>
+          {
+              options.IncludeScopes = true;
+              options.SingleLine = true;
+              options.TimestampFormat = "hh:mm:ss ";
+          }));
 
-//ILogger<Program> logger = loggerFactory.CreateLogger<Program>();
-//using (logger.BeginScope("[scope is enabled]"))
-//{
-//    logger.LogInformation("Hello World!");
-//    logger.LogInformation("Logs contain timestamp and log level.");
-//    logger.LogInformation("Each log message is fit in a single line.");
-//}
+ILogger<Program> logger = loggerFactory.CreateLogger<Program>();
+using (logger.BeginScope("[scope is enabled]"))
+{
+    logger.LogInformation("Hello World!");
+    logger.LogInformation("Logs contain timestamp and log level.");
+    logger.LogInformation("Each log message is fit in a single line.");
+}
 
 /**
  * Debug
  */
 
-//Debug.AutoFlush = true;
-//Debug.Indent();
-//Debug.WriteLine("Entering Main");
-//Console.WriteLine("Hello World.");
-//Debug.WriteLine("Exiting Main");
-//Debug.Unindent();
+Debug.AutoFlush = true;
+Debug.Indent();
+Debug.WriteLine("Entering Main");
+Console.WriteLine("Hello World.");
+Debug.WriteLine("Exiting Main");
+Debug.Unindent();
 
 ///**
 // * Tracing
